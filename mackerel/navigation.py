@@ -46,6 +46,8 @@ class Navigation:
         for node in self.nodes:
             if node.url.startswith(path):
                 nodes.append(node)
+        if self.site.config.getboolean('navigation', 'loop_reverse_sort'):
+            nodes.sort(reverse=True)
         return tuple(nodes)
 
     @cached_property

@@ -62,3 +62,4 @@ ENV/
 # Mackerel
 _build/
 _content/
+*.code-workspace
